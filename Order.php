@@ -4,9 +4,10 @@ namespace App\Entity;
 
 class Order
 {
-    public const STATUS_PENDING = 'pending';
-    public const STATUS_SHIPPED = 'shipped';
-    public const STATUS_DELIVERED = 'delivered';
+    private User $user;
 
-    private strning $status;
+    public function __construct(User $user = null) {
+        $this->user = $user !== null ? $user : new User('Anonymous');
+    }
+
     ...
