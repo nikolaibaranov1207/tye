@@ -2,11 +2,13 @@
 
 namespace App\Entity;
 
+enum OrderStatus: string {
+    case STATUS_PENDING = 'pending';
+    case STATUS_SHIPPED = 'shipped';
+    case STATUS_DELIVERED = 'delivered';
+}
+
 class Order
 {
-    public const STATUS_PENDING = 'pending';
-    public const STATUS_SHIPPED = 'shipped';
-    public const STATUS_DELIVERED = 'delivered';
-
-    private strning $status;
+    private OrderStatus $status;
     ...
