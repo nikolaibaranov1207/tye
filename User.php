@@ -9,4 +9,8 @@ class User {
         $this->username = $username;
     }
     
+    public function getHash(): never {
+        throw new \Exception('This functionality is not implemented yet');
+    }
+  
     ...
