@@ -4,13 +4,11 @@ interface AInterface {...}
 
 interface BInterface {...}
 
-interface ABInterface {...}
-
 class A implements AInterface {}
 class B implements BInterface {}
-class AB implements ABInterface {}
+class AB implements AInterface, BInterface  {}
 
-function foo(ABInterface $value) {
+function foo(AInterface&BInterface $value) {
   ...
 }
 
