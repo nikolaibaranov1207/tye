@@ -7,9 +7,7 @@ class A implements AInterface {...}
 class B implements BInterface {...}
 class AB implements AInterface, BInterface  {...}
 
-interface ABInterface extends AInterface, BInterface {}
-
-function function_for_A_and_B(ABInterface $value) {
+function function_for_A_and_B(AInterface&BInterface $value) {
   ...
 }
 function function_for_A_or_B(AInterface|BInterface $value) {
